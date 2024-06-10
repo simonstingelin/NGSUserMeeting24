@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -57,12 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="_static/webgui.js?v=6a4e60a0"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Higher Analysis and Numerics" href="HANANumeric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,8 +149,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Teaching with NGSolve - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Teaching with NGSolve - Home"/>`);</script>
   
-    <p class="title logo__title">Teaching with NGSolve</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -174,10 +180,16 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">HANA Numeric</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HANANumeric.html">Higher Analysis and Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coursematerial.html">Course material</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NGSolve in Jupyter-Book</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">Jupyter-Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGSolveinnb.html">NGSolve in Jupyter-Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGSolveinmd.html">NGSolve in markdown file</a></li>
 </ul>
 
     </div>
@@ -219,6 +231,21 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+<a href="https://github.com/simonstingelin/NGSUserMeeting24" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
 
 
 
@@ -330,12 +357,32 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="teaching-with-ngsolve">
 <h1>Teaching with NGSolve<a class="headerlink" href="#teaching-with-ngsolve" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+<p><br><br></p>
+<p><strong>Simon Stingelin</strong>
+<br><br></p>
+<p>ZHAW School of Engineering<br>
+Institute of Applied Mathematics and Physics (IAMP)
+<br><br></p>
+<hr class="docutils" />
+<p><strong>Outline of the presentation:</strong></p>
+<ul class="simple">
+<li><p>Course “Higher Analysis and Numeric”</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li><p>Concept of the module</p></li>
+<li><p>Course material</p></li>
+<li><p>Projects</p></li>
 </ul>
+</li>
+<li><p>NGSolve in Jupyter-Book</p>
+<ul>
+<li><p>Jupyter-Notebooks</p></li>
+<li><p>Markdown Files</p></li>
+</ul>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -370,11 +417,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="markdown.html"
+       href="HANANumeric.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Higher Analysis and Numerics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -393,21 +440,10 @@ document.write(`
   
   <div class="footer-item">
     
-<p class="component-author">
-By Simon Stingelin
-</p>
-
   </div>
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2024.
-      <br/>
-    
-  </p>
 
   </div>
   

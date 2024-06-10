@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Markdown Files &#8212; Teaching with NGSolve</title>
+    <title>Higher Analysis and Numerics &#8212; Teaching with NGSolve</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -57,10 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'HANANumeric';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="_static/webgui.js?v=6a4e60a0"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content with notebooks" href="notebooks.html" />
+    <link rel="next" title="Course material" href="coursematerial.html" />
     <link rel="prev" title="Teaching with NGSolve" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -146,8 +148,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Teaching with NGSolve - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Teaching with NGSolve - Home"/>`);</script>
   
-    <p class="title logo__title">Teaching with NGSolve</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -171,10 +179,16 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">HANA Numeric</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Higher Analysis and Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coursematerial.html">Course material</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NGSolve in Jupyter-Book</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">Jupyter-Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGSolveinnb.html">NGSolve in Jupyter-Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGSolveinmd.html">NGSolve in markdown file</a></li>
 </ul>
 
     </div>
@@ -218,6 +232,21 @@
 <div class="article-header-buttons">
 
 
+<a href="https://github.com/simonstingelin/NGSUserMeeting24" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
 
 
 
@@ -229,7 +258,7 @@
       
       
       
-      <li><a href="_sources/markdown.md" target="_blank"
+      <li><a href="_sources/HANANumeric.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -313,7 +342,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Markdown Files</h1>
+    <h1>Higher Analysis and Numerics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -323,10 +352,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-participants">Course participants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization-of-the-course">Organization of the course</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-of-the-course">Content of the course</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-to-digitalization">Contribution to digitalization</a></li>
 </ul>
             </nav>
         </div>
@@ -338,59 +367,107 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Link to this heading">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-<p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="higher-analysis-and-numerics">
+<h1>Higher Analysis and Numerics<a class="headerlink" href="#higher-analysis-and-numerics" title="Link to this heading">#</a></h1>
+<section id="course-participants">
+<h2>Course participants<a class="headerlink" href="#course-participants" title="Link to this heading">#</a></h2>
+<p>The ZHAW is one of the leading <strong>universities of applied sciences</strong> (<strong>Fachhochschule</strong>) in Switzerland. It offers teaching, research, continuing education and other services that are both practice-oriented and science-based.</p>
+<p>The participants of the course are students of the <strong>School of Engineering</strong> and study</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/computer-science/">Computer Science</a></p></li>
+<li><p><a class="reference external" href="https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/mechanical-engineering/">Mechanical Engineering</a></p></li>
+<li><p><a class="reference external" href="https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/electrical-engineering/">Electrical Engineering</a></p></li>
+<li><p><a class="reference external" href="https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/systems-engineering/">Systems Engineering</a></p></li>
+<li><p><a class="reference external" href="https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/aviation/">Aviation</a></p></li>
+</ul>
 </section>
-<section id="sample-roles-and-directives">
-<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Link to this heading">#</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<p>Here is a “note” directive:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
+<hr class="docutils" />
+<section id="organization-of-the-course">
+<h2>Organization of the course<a class="headerlink" href="#organization-of-the-course" title="Link to this heading">#</a></h2>
+<p>In addition to an introduction to functional analysis and modeling with partial differential equations (PDE), numerical methods for solving PDEs are developed. Accompanying applications from engineering practice are presented.</p>
+<figure class="align-default" id="organization">
+<a class="reference internal image-reference" href="_images/HANAAufbau.png"><img alt="_images/HANAAufbau.png" src="_images/HANAAufbau.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Organization of the course</span><a class="headerlink" href="#organization" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<div role="list" class="citation-list">
-<div class="citation" id="id3" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">HdHPK14</a><span class="fn-bracket">]</span></span>
-<p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</div>
-</div>
-</div>
+<hr class="docutils" />
+<section id="content-of-the-course">
+<h2>Content of the course<a class="headerlink" href="#content-of-the-course" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Analysis</p>
+<ul>
+<li><p>Introduction to functional analysis</p>
+<ul>
+<li><p>Basic concepts</p></li>
+<li><p>Function spaces</p></li>
+<li><p>Calculus of variations</p>
+<ul>
+<li><p>Differentiability in function spaces</p></li>
+<li><p>Weak solutions</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Introduction to partial differential equations</p>
+<ul>
+<li><p>What is a partial differential equation?</p></li>
+<li><p>Linear partial differential equations</p></li>
+<li><p>Classification PDE 2nd order</p></li>
+<li><p>Modeling</p>
+<ul>
+<li><p>Stationary diffusion processes</p></li>
+<li><p>Transient diffusion processes</p></li>
+<li><p>Hyperbolic equation</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Numerics</p>
+<ul>
+<li><p>Finite element method</p>
+<ul>
+<li><p>Introduction in one dimension</p></li>
+<li><p>Finite element procedure</p></li>
+<li><p>Nodal finite elements (2d, 3d)</p></li>
+<li><p>Finite elements of higher order</p></li>
+</ul>
+</li>
+<li><p>Linear equation solver</p>
+<ul>
+<li><p>Matrix structure examples</p></li>
+<li><p>Direct equation solvers</p></li>
+<li><p>Iterative equation solvers</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Practical applications (projects)</p>
+<ul>
+<li><p>Stationary temperature field</p></li>
+<li><p>Electrostatic field</p></li>
+<li><p>Magnetostatic field (2d)</p></li>
+<li><p>Mechanical field</p></li>
+<li><p>Flow field</p></li>
+<li><p>Transient temperature field</p></li>
+<li><p>Acoustic field</p></li>
+</ul>
+</li>
+</ul>
 </section>
-<section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<hr class="docutils" />
+<section id="contribution-to-digitalization">
+<h2>Contribution to digitalization<a class="headerlink" href="#contribution-to-digitalization" title="Link to this heading">#</a></h2>
+<p>The program includes the implementation of numerical methods on the computer. In particular, students also learn about modern digital techniques for product optimization.</p>
+<figure class="align-default" id="software">
+<img alt="_images/Software.png" src="_images/Software.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Software</span><a class="headerlink" href="#software" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -434,11 +511,11 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
       </div>
     </a>
     <a class="right-next"
-       href="notebooks.html"
+       href="coursematerial.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Course material</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -458,10 +535,10 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-participants">Course participants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization-of-the-course">Organization of the course</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-of-the-course">Content of the course</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-to-digitalization">Contribution to digitalization</a></li>
 </ul>
   </nav></div>
 
@@ -475,21 +552,10 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
   
   <div class="footer-item">
     
-<p class="component-author">
-By Simon Stingelin
-</p>
-
   </div>
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2024.
-      <br/>
-    
-  </p>
 
   </div>
   

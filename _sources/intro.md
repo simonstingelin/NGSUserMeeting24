@@ -1,5 +1,21 @@
 # Teaching with NGSolve
+<br><br>
 
+**Simon Stingelin**
+<br><br>
 
-```{tableofcontents}
-```
+ZHAW School of Engineering<br>
+Institute of Applied Mathematics and Physics (IAMP)
+<br><br>
+
+---
+
+**Outline of the presentation:**
+
+- Course "Higher Analysis and Numeric"
+    - Concept of the module
+    - Course material
+    - Projects
+- NGSolve in Jupyter-Book
+    - Jupyter-Notebooks
+    - Markdown Files

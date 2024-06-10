@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NGSolve in Jupyter-Notebook &#8212; Teaching with NGSolve</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"f8c029434fcf4c0d80d6a0f0a10b36de": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "50vh", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "100%"}}, "f138c47eb4354ac4b7561ff0e07a23f1": {"model_name": "WebguiModel", "model_module": "webgui_jupyter_widgets", "model_module_version": "0.2.34", "state": {"_dom_classes": [], "_model_module": "webgui_jupyter_widgets", "_model_module_version": "0.2.34", "_model_name": "WebguiModel", "_view_count": null, "_view_module": "webgui_jupyter_widgets", "_view_module_version": "0.2.34", "_view_name": "WebguiView", "layout": "IPY_MODEL_f8c029434fcf4c0d80d6a0f0a10b36de", "tabbable": null, "tooltip": null, "value": {"gui_settings": {}, "ngsolve_version": "6.2.2307-95-g7ad07b480", "mesh_dim": 2, "order2d": 1, "order3d": 1, "draw_vol": null, "draw_surf": null, "objects": [], "deformation": false, "mesh_regions_2d": 1, "mesh_regions_3d": 0, "names": ["default"], "edge_names": ["bottom", "right", "top", "left"], "funcdim": 0, "colors": [[0.0, 1.0, 0.0, 1.0]], "show_wireframe": true, "show_mesh": true, "Bezier_points": ["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"], "edges": ["zcxMPgAAAAAAAAAAAAAAAM3MzD4AAAAAAAAAAAAAAACamRk/AAAAAAAAAAAAAAAAzcxMPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIA/zcxMPgAAAAAAAIA/AACAP83MzD4AAAAAAACAPwAAgD+amRk/AAAAAAAAgD8AAIA/zcxMPwAAAAAAAIA/AACAPwAAgD8AAAAAAACAP83MTD8AAIA/AAAAAAAAAECamRk/AACAPwAAAAAAAABAzczMPgAAgD8AAAAAAAAAQM3MTD4AAIA/AAAAAAAAAEAAAAAAAACAPwAAAAAAAABAPG4ppM3MTD8AAAAAAABAQDxuqaSamRk/AAAAAAAAQEBZJf6kzczMPgAAAAAAAEBAPG4ppc3MTD4AAAAAAABAQAAAAAAAAAAAAAAAAAAAQEA=", "AAAAAAAAAAAAAAAAAAAAAM3MTD4AAAAAAAAAAAAAAADNzMw+AAAAAAAAAAAAAAAAmpkZPwAAAAAAAAAAAAAAAM3MTD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAP83MTD4AAAAAAACAPwAAgD/NzMw+AAAAAAAAgD8AAIA/mpkZPwAAAAAAAIA/AACAP83MTD8AAAAAAACAPwAAgD8AAIA/AAAAAAAAAEDNzEw/AACAPwAAAAAAAABAmpkZPwAAgD8AAAAAAAAAQM3MzD4AAIA/AAAAAAAAAEDNzEw+AACAPwAAAAAAAABAAAAAAAAAgD8AAAAAAABAQDxuKaTNzEw/AAAAAAAAQEA8bqmkmpkZPwAAAAAAAEBAWSX+pM3MzD4AAAAAAABAQDxuKaXNzEw+AAAAAAAAQEA="], "Bezier_trig_points": ["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"], "mesh_center": [0.49999999999999994, 0.5000000000000001, 1.1125369292536007e-308], "mesh_radius": 0.7071067811865477, "autoscale": true, "fullscreen": false}}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'NGSolveinnb';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="_static/webgui.js?v=6a4e60a0"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NGSolve in markdown file" href="NGSolveinmd.html" />
+    <link rel="prev" title="Jupyter-Book" href="jupyterbook.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Teaching with NGSolve - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Teaching with NGSolve - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Teaching with NGSolve
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">HANA Numeric</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HANANumeric.html">Higher Analysis and Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coursematerial.html">Course material</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NGSolve in Jupyter-Book</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">Jupyter-Book</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">NGSolve in Jupyter-Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NGSolveinmd.html">NGSolve in markdown file</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/simonstingelin/NGSUserMeeting24" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/NGSolveinnb.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>NGSolve in Jupyter-Notebook</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ngsolve-in-jupyter-notebook">
+<h1>NGSolve in Jupyter-Notebook<a class="headerlink" href="#ngsolve-in-jupyter-notebook" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ngsolve</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">ngsolve.webgui</span> <span class="kn">import</span> <span class="n">Draw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">Mesh</span><span class="p">(</span><span class="n">unit_square</span><span class="o">.</span><span class="n">GenerateMesh</span><span class="p">(</span><span class="n">maxh</span><span class="o">=</span><span class="mf">0.2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Draw</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "f138c47eb4354ac4b7561ff0e07a23f1"}</script></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="jupyterbook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter-Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="NGSolveinmd.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NGSolve in markdown file</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
