@@ -52,16 +52,6 @@ A JupyterHub is available for students who are not familiar with installing soft
 - [The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)
 
 :::
-
-:::{grid-item-card} Semester end project
-
-<img src="./images/WaveEquation.mov" alt="Project" height="40px">
-
-^^^
-
-The assessment is based on a project at the end of the semester
-
-:::
 ::::
 
 
