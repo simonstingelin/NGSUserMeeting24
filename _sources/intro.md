@@ -10,7 +10,7 @@ Institute of Applied Mathematics and Physics (IAMP)
 
 ---
 
-**Outline of the presentation:**
+**Outline of the presentation**
 
 - Course "Higher Analysis and Numeric"
     - Concept of the module
