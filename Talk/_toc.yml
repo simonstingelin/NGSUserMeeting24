@@ -3,7 +3,17 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: HANA Numeric
+    chapters:
+    - file: HANANumeric
+    - file: coursematerial
+  - caption: NGSolve in Jupyter-Book
+    chapters:
+    - file: jupyterbook
+    - file: generateWebGUIjs
+    - file: NGSolveinnb
+    - file: NGSolveinmd
+  - caption: Appendix
+    chapters:
+    - file: Appendix.md
