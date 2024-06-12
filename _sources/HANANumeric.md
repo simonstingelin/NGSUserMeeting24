@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Course Higher Analysis and Numerics
+# Higher Analysis and Numerics
 
 ## Course participants
 

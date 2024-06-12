@@ -40,7 +40,7 @@ kernelspec:
 
 :::
 
-:::{grid-item-card} JupyterHub
+:::{grid-item-card} [JupyterHub](http://clt-dsk-t-7307.zhaw.ch)
 
 [<img src="./images/hublogo.png" alt="JupyterHub" height="40px">](https://jupyter.org/hub)
 
