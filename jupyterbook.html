@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Jupyter-Book &#8212; Teaching with NGSolve</title>
   
@@ -63,7 +63,7 @@
     <script src="_static/webgui.js?v=c292065d"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Generating webgui.js" href="generateWebGUIjs.html" />
+    <link rel="next" title="Finite element method getting started examples" href="ExamplePage.html" />
     <link rel="prev" title="Projects" href="Projects.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,9 +183,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">NGSolve in Jupyter-Book</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Jupyter-Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generateWebGUIjs.html">Generating webgui.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExamplePage.html">Finite element method getting started examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NGSolveinnb.html">NGSolve in Jupyter-Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NGSolveinmd.html">NGSolve in markdown file</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -352,6 +351,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-book">Why Jupyter-Book?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ngsolve-in-jupyter-book">NGSolve in Jupyter-Book</a></li>
 </ul>
             </nav>
         </div>
@@ -367,15 +367,98 @@ document.write(`
 <h1>Jupyter-Book<a class="headerlink" href="#jupyter-book" title="Link to this heading">#</a></h1>
 <section id="why-jupyter-book">
 <h2>Why Jupyter-Book?<a class="headerlink" href="#why-jupyter-book" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Figures with captions, references</p></li>
-<li><p>Proofs, Theorems, etc</p>
-<ul>
-<li><p>pip install sphinx-proof</p></li>
-</ul>
-</li>
-<li><p>Results</p></li>
-</ul>
+<div class="admonition-a-quote-from-the-jupyter-book-website admonition">
+<p class="admonition-title">A quote from the Jupyter-Book website:</p>
+<p>Build beautiful, publication-quality books and documents from computational content.</p>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 text-center docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Text content ✏️</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Structure books with text files and Jupyter Notebooks with minimal configuration.</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://jupyterbook.org/en/stable/basics/organize.html"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">MyST Markdown ✨</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Write MyST Markdown to create enriched documents with publication-quality features.</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://jupyterbook.org/en/stable/content/myst.html"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Executable content 🔁</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Execute notebook cells, store results, and insert outputs across pages.</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://jupyterbook.org/en/stable/content/executable/index.html"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Live environments 🚀</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Connect your book with Binder, JupyterHub, and other live environments</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://jupyterbook.org/en/stable/interactive/launchbuttons.html"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Build and publish 🎁</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Share your built books via web services and hosted websites.</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://jupyterbook.org/en/stable/publish/web.html"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">UI components ⚡</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Create interactive and web-native components and services.</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://jupyterbook.org/en/stable/content/components.html"></a></div>
+</div>
+</div>
+</div>
+<!-- - Much LaTeX functionality and 
+- Cross references over multiple files
+- Figures with captions
+- Proofs, Theorems, etc
+    - `pip install sphinx-proof`
+- Results, `glue`
+- The result looks like a script
+- Markdown files can also be executed with `jupytext` -->
+</section>
+<section id="ngsolve-in-jupyter-book">
+<h2>NGSolve in Jupyter-Book<a class="headerlink" href="#ngsolve-in-jupyter-book" title="Link to this heading">#</a></h2>
+<p>Provided that NGSolve is installed in the python environment, NGSolve can also be integrated in a Juptyter book.</p>
+<p>In order to be able to use the <strong>webgui</strong> in a book, the <code class="docutils literal notranslate"><span class="pre">webgui.js</span></code> must be saved in the <code class="docutils literal notranslate"><span class="pre">./_static</span></code> directory. This can be done with the following script:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">webgui_jupyter_widgets.js</span> <span class="kn">import</span> <span class="n">widget_code</span> 
+
+<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;_static/webgui.js&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">widget_code</span><span class="p">)</span>
+<span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -419,11 +502,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="generateWebGUIjs.html"
+       href="ExamplePage.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Generating webgui.js</p>
+        <p class="prev-next-title">Finite element method getting started examples</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -443,6 +526,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-book">Why Jupyter-Book?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ngsolve-in-jupyter-book">NGSolve in Jupyter-Book</a></li>
 </ul>
   </nav></div>
 

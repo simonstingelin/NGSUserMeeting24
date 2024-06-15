@@ -18,13 +18,15 @@ kernelspec:
 
 The [ZHAW](https://www.zhaw.ch/en/university/) is one of the leading **universities of applied sciences** (**Fachhochschule**) in Switzerland. It offers teaching, research, continuing education and other services that are both practice-oriented and science-based.
 
-The participants of the course are students of the [**School of Engineering**](https://www.zhaw.ch/en/engineering/) and study
+The participants of the course are students of the [**School of Engineering**](https://www.zhaw.ch/en/engineering/) and typically study
 
 - [Computer Science](https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/computer-science/)
 - [Mechanical Engineering](https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/mechanical-engineering/)
 - [Electrical Engineering](https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/electrical-engineering/)
 - [Systems Engineering](https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/systems-engineering/)
 - [Aviation](https://www.zhaw.ch/en/engineering/study/bachelors-degree-programmes/aviation/)
+
+The students have the basic mathematical knowledge in linear algebra, analysis and numerics with a focus on application. The course is intended as preparation for a Master's degree course (university, university of applied sciences) or as a specialization for students interested in mathematics.
 
 ---
 

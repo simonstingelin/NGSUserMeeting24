@@ -54,4 +54,5 @@ A JupyterHub is available for students who are not familiar with installing soft
 :::
 ::::
 
+The course is based essentially on the contents of {cite}`schoeberliFEM,schoeberlNumPDE,burg_wille_haf_meister_AnalysisI,burg_wille_haf_meister_PDE`
 
