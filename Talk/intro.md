@@ -17,5 +17,5 @@ Institute of Applied Mathematics and Physics (IAMP)
     - Course material
     - Projects
 - NGSolve in Jupyter-Book
-    - Jupyter-Notebooks
     - Markdown Files
+    - Jupyter-Notebooks

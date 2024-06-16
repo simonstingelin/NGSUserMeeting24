@@ -40,7 +40,7 @@ kernelspec:
 
 :::
 
-:::{grid-item-card} JupyterHub
+:::{grid-item-card} [JupyterHub](http://clt-dsk-t-7307.zhaw.ch)
 
 [<img src="./images/hublogo.png" alt="JupyterHub" height="40px">](https://jupyter.org/hub)
 
@@ -52,16 +52,7 @@ A JupyterHub is available for students who are not familiar with installing soft
 - [The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)
 
 :::
-
-:::{grid-item-card} Semester end project
-
-<img src="./images/WaveEquation.mov" alt="Project" height="40px">
-
-^^^
-
-The assessment is based on a project at the end of the semester
-
-:::
 ::::
 
+The course is based essentially on the contents of {cite}`schoeberliFEM,schoeberlNumPDE,burg_wille_haf_meister_AnalysisI,burg_wille_haf_meister_PDE`
 

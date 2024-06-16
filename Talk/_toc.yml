@@ -4,16 +4,16 @@
 format: jb-book
 root: intro
 parts:
-  - caption: HANA Numeric
+  - caption: Course
     chapters:
     - file: HANANumeric
     - file: coursematerial
+    - file: Projects
   - caption: NGSolve in Jupyter-Book
     chapters:
     - file: jupyterbook
-    - file: generateWebGUIjs
+    - file: ExamplePage
     - file: NGSolveinnb
-    - file: NGSolveinmd
   - caption: Appendix
     chapters:
     - file: Appendix.md
