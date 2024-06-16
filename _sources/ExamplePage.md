@@ -5,12 +5,33 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
+    jupytext_version: 1.16.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
+`````{margin}
+````{note}
+Executable md-file
+```
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
     jupytext_version: 1.15.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
+```
+````
+`````
 
 # Finite element method getting started examples
 
@@ -51,10 +72,10 @@ $$u(x) = -\frac{1}{2} x (x-1).$$
 ````{note}
 Executable code block
 ```
-    ```{code-cell} ipython3
-    def uanalytic(x):
-        return -0.5*x*(x-1)
-    ```
+```{code-cell} ipython3
+def uanalytic(x):
+    return -0.5*x*(x-1)
+```
 ````
 `````
 
@@ -184,14 +205,13 @@ FEM 1d first order basis functions
 ````{note}
 glue figures
 ```
-    ```{glue:figure} FEM_1d_p1_fig
-    ---
-    figwidth: 400px
-    name: fig-FEM1dBasisFct
-    ---
+```{glue:figure} FEM_1d_p1_fig
+---
+figwidth: 400px
+name: fig-FEM1dBasisFct
+---
 
-    FEM 1d first order basis functions
-    ```
+FEM 1d first order basis functions
 ```
 ````
 `````
@@ -296,6 +316,15 @@ A = np.array(A,dtype=float)
 A
 ```
 
+`````{margin}
+````{note}
+Notes, warnings, and other admonitions
+```
+```{admonition} Exercise
+Compute the coefficients by hand.
+```
+````
+`````
 ```{admonition} Exercise
 Compute the coefficients by hand.
 ```
@@ -431,8 +460,6 @@ print(a.mat)
 print(b.vec)
 ```
 
-Für die Lösung selber steht in `NGSolve` die Klasse `GridFunction` zur Verfügung. Die Trial und Test Functions werden nur zur Definition des Problems benutzt und besitzen daher auch kein Memory für den Lösungsvektor. Für die Lösung benötigen wir daher eine GridFunction. In der Auswertung dieser wird Linearkombination der Basisfunktionen automatisch berechnet.
-
 The `GridFunction` class is available in `NGSolve` for the solution itself. The trial and test functions are only used to define the problem and therefore have no memory for the solution vector, for example. The linear combination of the basis functions is automatically calculated in the evaluation of this. We need a GridFunction for the solution:
 
 ```{code-cell} ipython3
@@ -462,7 +489,7 @@ plt.show()
 
 ## Extension into two-dimensional space
 
-We consider the analog boundary value problem in two dimensions
+Now let us look at the two-dimensional case. We will see that apart from the mesh, hence the region, the implementation in ngsolve remains identical. We consider the analog boundary value problem in two dimensions
 
 $$\begin{split}
 -\Delta u & = 1 \quad\text{for}\ x\in \Omega\\
@@ -494,6 +521,14 @@ mesh = Mesh(unit_square.GenerateMesh(maxh=0.25))
 
 The size of the mesh can be controlled via the `maxh` parameter.
 
+`````{margin}
+````{note}
+`webgui_jupyter_widgets`
+
+The js-file must be installed in _static/ in order to have the functionality available (see {ref}`chap:ngsolveinjb`).
+````
+`````
+
 ```{code-cell} ipython3
 Draw(mesh);
 ```
@@ -513,20 +548,11 @@ gfu = GridFunction(V)
 
 Using the grid function, we can visualize the global basic functions. To do this, we set one coefficient to 1 and the others to 0. In the following example we visualize the 20th global basis function:
 
-
 ```{code-cell} ipython3
 gfu.vec.FV()[:] = 0 # Initialize all entries with 0
 gfu.vec.FV()[20] = 1
 
 Draw(gfu,mesh,'u');
-```
-
-The number of free dof's is given by
-
-```{code-cell} ipython3
-freedofs = V.FreeDofs()
-print (freedofs)
-freedofsnp = np.array([i for i in freedofs])
 ```
 
 Using $u(x) = \sum_i u_i\,\varphi_i(x) \in V$, as in the 1d example {eq}`eq:discweekequation`, the same system of equations follows
@@ -547,7 +573,7 @@ b : V & \to \mathbb{R}\\
     v & \mapsto b(v) = \int_\Omega f(x)\cdot v\, dV.
 \end{split}$$
 
-For the definition in `ngsolve` we use the proxy functions
+For the definition in `ngsolve` we use again the proxy functions
 
 ```{code-cell} ipython3
 u = V.TrialFunction()
@@ -563,33 +589,28 @@ A += grad(u) * grad(v)*dx
 
 and analogously for the linear form
 
-$$\begin{split}
-b : V & \to \mathbb{R}\\
-    v & \mapsto b(v) = \int_\Omega f(x) v dV,
-\end{split}$$
-
 ```{code-cell} ipython3
 f = CoefficientFunction(1)
 b = LinearForm(V)
 b += f*v*dx
 ```
 
-Die gegebene Funktion $f(x)$ der rechten Seite können wir mit sogenannten `CoefficientFunction` definieren.
+The right-hand side function onece again defined using a `CoefficientFunction`.
 
-Damit haben wir die Bilinearform, welche im endlichdimensionalen mit Hilfe einer Matrix und die Linearform, welche mit einem Vektor beschrieben werden kann definiert, aber noch nicht berechnet. Die Berechnung derer nennt man auch **Assembling**.
+We have thus defined the bilinear form, which can be described in finite dimensions using a matrix, and the linear form, which can be described using a vector, but have not yet calculated them. The calculation of these is also called **assembling**.
 
 ```{code-cell} ipython3
 A.Assemble()
 b.Assemble();
 ```
 
-Die Matrix $A$ ist "sparse" gespeichert. Das bedeutet, dass nur die Matrix Einträge gespeichert werden, für welche wir potentiell einen Eintrag erhalten. Für den ganzen Rest der Matrix wird der Speicher gar nicht allokiert. Grundsätzlich haben wir hier alle Freiheitsgrade:
+The matrix $A$ is in a *sparse* format stored. This means that only the matrix entries for which we potentially receive an entry are saved. The memory is not allocated at all for the rest of the matrix.
 
 ```{code-cell} ipython3
 print(A.mat)
 ```
 
-Wir können diese Matrix (zumindest solange sie klein ist!) auch als vollbesetzte "dense" Matrix betrachten:
+We can also regard this matrix (at least as long as it is small!) as a *dense* matrix:
 
 ```{code-cell} ipython3
 rows,cols,vals = A.mat.COO()
@@ -604,7 +625,15 @@ plt.spy(denseA)
 plt.show()
 ```
 
-Das Pattern der Matrixeinträge hängt von der Nummerierung der Knoten (aus dem Meshing) und damit der Freiheitsgrade für den FEM Ansatz erster Ordnung ab.
+We can also use `scipy.sparse` for further computations.
+
+```{code-cell} ipython3
+import scipy.sparse as sp
+Asparse = sp.coo_matrix((vals,(rows,cols)))
+plt.spy(Asparse)
+```
+
+The pattern of the matrix entries depends on the numbering of the nodes (from the meshing) and the FEM basic functions. It is also possible to draw the mesh directly with `matplotlib`; the mesh object contains all the information required for this.
 
 ```{code-cell} ipython3
 for e in mesh.edges:
@@ -617,18 +646,32 @@ plt.gca().set_aspect(1)
 plt.show()
 ```
 
+We now consider the free degrees of freedom, for which we must keep the homogeneous Dirichlet boundary condition in mind. The number of free dof's is given by
+
+```{code-cell} ipython3
+freedofs = V.FreeDofs()
+print(freedofs)
+freedofsnp = np.array([i for i in freedofs])
+```
+
+As we can see, the order of numbering the nodes is via the corners, edges into the interior. Thus, the degrees of freedom available to us are at the end. The matrix pattern for solving the problem is given by
+
 ```{code-cell} ipython3
 ind = np.arange(freedofsnp.shape[0])[freedofsnp]
 plt.spy(denseA[np.ix_(ind,ind)])
 plt.show()
 ```
 
-Lösen wir das System für die inneren Freiheitsgrade:
+Let's solve the system for the inner degrees of freedom:
+
+`````{margin}
+````{note}
+I usually start writing with a Jupyter notebook and do the cosmetics in the exported Markdown file later.
+````
+`````
 
 ```{code-cell} ipython3
 gfu.vec.data = A.mat.Inverse(freedofs=V.FreeDofs())*b.vec
-```
 
-```{code-cell} ipython3
 Draw(gfu,mesh,'u');
 ```

@@ -104,6 +104,7 @@ Create interactive and web-native components and services.
 - The result looks like a script
 - Markdown files can also be executed with `jupytext` -->
 
+(chap:ngsolveinjb)=
 ## NGSolve in Jupyter-Book
 
 Provided that NGSolve is installed in the python environment, NGSolve can also be integrated in a Juptyter book.
