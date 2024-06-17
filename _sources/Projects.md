@@ -170,7 +170,7 @@ The assessment is based on a project at the end of the semester.
 - Time-dependent heat convection, conduction
 - Coupling with Stokes equation
 - Nonlinear coupled system
-- Problem dimension reduction from 3d to 2d
+- Dimensional reduction from 3d to 2d
 
 :::
 
