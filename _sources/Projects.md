@@ -14,7 +14,7 @@ kernelspec:
 
 # Projects
 
-The assessment is based on a project at the end of the semester.
+The assessment is based on a project at the end of the semester. The project descriptions can be made available (please contact me).
 
 ::::{grid} auto
 :gutter: 3

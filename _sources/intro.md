@@ -4,6 +4,8 @@
 **Simon Stingelin**
 <br><br>
 
+stiw@zhaw.ch<br>
+<br>
 ZHAW School of Engineering<br>
 Institute of Applied Mathematics and Physics (IAMP)
 <br><br>
