@@ -23,8 +23,9 @@ kernelspec:
 
 ^^^
 
-- All calculations can be done by the student
-- PDF export of the entire script can be difficult
+- All calculations can be done by the student.
+- PDF export of the entire script can be difficult.
+- The sources are available if you are interested (please contact me).
 
 :::
 
