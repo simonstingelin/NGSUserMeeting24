@@ -174,5 +174,48 @@ The assessment is based on a project at the end of the semester. The project des
 
 :::
 
+:::{grid-item-card} Pattern generation
+:class-header: bg-light
+
+<img src="./images/PatternExample.png" alt="Python" height="120px"><img src="./images/ZebraBild.jpg" alt="Python" height="112px">
+
+^^^
+
+- Nonlinear time-dependent parabolic system
+- Coupled parametric equation
+- Periodic boundary condition
+- Large time-scale integration
+
+:::
+
+:::{grid-item-card} Path optimization
+:class-header: bg-light
+
+<img src="./images/ShortestPath.png" alt="Python" height="120px"><img src="./images/ApproxDistanzpLaplace.png" alt="Python" height="118px">
+
+^^^
+
+- Nonlinear partial differential equation
+  - $\Delta_p$-Laplace Operator
+- Integration over gradient field
+- Adaptive mesh refinement
+- Approximation of distance function
+
+:::
+
+:::{grid-item-card} Magnetic field
+:class-header: bg-light
+
+<img src="./images/BFeldlinien.png" alt="Python" height="120px"><img src="./images/Bahnen.png" alt="Python" height="118px">
+
+^^^
+- Maxwell equations for mageto static
+- H-curl discretization
+- Charged particles in magnetic field
+- Modeling of coils
+
+
+:::
+
 ::::
 
